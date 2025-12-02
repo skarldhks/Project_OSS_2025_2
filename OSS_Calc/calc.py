@@ -62,7 +62,7 @@ class Calculator:
             except:
                 self.expression = "에러"
 
-         화씨 → 섭씨 버튼
+        # 화씨 → 섭씨 버튼
         elif char == 'F→C':
             try:
                 value = float(self.expression)
