@@ -9,7 +9,7 @@ def main():
         print("1. 지출 추가")
         print("2. 지출 목록 보기")
         print("3. 총 지출 보기")
-        print("4. 일정 금액 이상 지출 보기")
+        print("4. 지출 금액 낮은 순으로 보기")
         print("5. 종료")
         choice = input("선택 > ")
 
@@ -30,12 +30,7 @@ def main():
             budget.total_spent()
 
         elif choice == "4":
-            try:
-                threshold = int(input("기준 금액(원): "))
-            except ValueError:
-                print("잘못된 금액입니다.\n")
-                continue
-            budget.list_over_threshold(threshold)
+            budget.list_sorted_by_amount()
 
         elif choice == "5":
             print("가계부를 종료합니다.")
